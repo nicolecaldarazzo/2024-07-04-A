@@ -10,10 +10,6 @@ class Controller:
         # the model, which implements the logic of the program and holds the data
         self._model = model
 
-    def handle_scroll(self, e):
-        print(e.x)
-        self._view.txt_result1.scroll_to(e.x, e.y)
-
     def handle_graph(self, e):
         pass
 

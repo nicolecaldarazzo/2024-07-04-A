@@ -15,7 +15,8 @@ class DAO():
             print("Connessione fallita")
         else:
             cursor = cnx.cursor(dictionary=True)
-            query = """select * from state s"""
+            query = """select * 
+                    from state s"""
             cursor.execute(query)
 
             for row in cursor:
@@ -40,8 +41,10 @@ class DAO():
         if cnx is None:
             print("Connessione fallita")
         else:
-            cursor = cnx.cursor()
-            query = """select * from sighting s order by `datetime` asc """
+            cursor = cnx.cursor(dictionary=True)
+            query = """select * 
+                    from sighting s 
+                    order by `datetime` asc """
             cursor.execute(query)
 
             for row in cursor:

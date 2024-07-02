@@ -20,8 +20,8 @@ class View(ft.UserControl):
         self.btn_graph = None
         self.btn_path = None
         # second row
-        self.txt_result1 = None #Qui scrivere gli outputs del punto 1
-        self.txt_result2 = None #Qui scrivere gli outputs del punto 2
+        self.txt_result1 = None  # Qui scrivere gli outputs del punto 1
+        self.txt_result2 = None  # Qui scrivere gli outputs del punto 2
 
     def load_interface(self):
         # title
@@ -39,7 +39,7 @@ class View(ft.UserControl):
                                            tooltip="Crea il grafo del punto 1",
                                            on_click=self._controller.handle_graph)
         self.btn_path = ft.ElevatedButton(text="Calcola percorso",
-                                           tooltip="Risolvi il punto 2",
+                                          tooltip="Risolvi il punto 2",
                                           on_click=self._controller.handle_path)
 
         row1 = ft.Row([self.ddyear, self.ddshape, self.btn_graph, self.btn_path],
@@ -53,25 +53,25 @@ class View(ft.UserControl):
         self.txt_result2.controls.append(ft.Text("Risultati punto2"))
 
         container1 = ft.Container(
-                    content=self.txt_result1,
-                    margin=10,
-                    padding=10,
-                    alignment=ft.alignment.center,
-                    bgcolor=ft.colors.GREY_200,
-                    width=450,
-                    height=450,
-                    border_radius=10,
-                )
+            content=self.txt_result1,
+            margin=10,
+            padding=10,
+            alignment=ft.alignment.center,
+            bgcolor=ft.colors.GREY_200,
+            width=450,
+            height=450,
+            border_radius=10,
+        )
         container2 = ft.Container(
-                    content=self.txt_result2,
-                    margin=10,
-                    padding=10,
-                    alignment=ft.alignment.center,
-                    bgcolor=ft.colors.GREY_200,
-                    width=450,
-                    height=450,
-                    border_radius=10,
-                )
+            content=self.txt_result2,
+            margin=10,
+            padding=10,
+            alignment=ft.alignment.center,
+            bgcolor=ft.colors.GREY_200,
+            width=450,
+            height=450,
+            border_radius=10,
+        )
 
         row2 = ft.Row([container1, container2],
                       alignment=ft.MainAxisAlignment.SPACE_EVENLY,

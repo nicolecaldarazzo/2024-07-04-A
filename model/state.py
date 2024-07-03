@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 @dataclass
 class State:
-    _id: int
+    _id: str
     _Name: str
     _Capital: str
     _Lat: float

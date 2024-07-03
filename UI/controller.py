@@ -15,9 +15,3 @@ class Controller:
 
     def handle_path(self, e):
         pass
-
-    def fill_ddyear(self):
-        pass
-
-    def fill_ddshape(self, e):
-        pass
